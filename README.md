@@ -13,7 +13,8 @@ arcgis-python-automation/
 │   ├── batch_map_production.py         # Automated map layout export
 │   ├── geodatabase_management.py       # Enterprise geodatabase operations
 │   ├── deep_learning_resampling.py     # DEM + RGB overlay with rasterio
-│   └── spatial_etl_pipeline.py         # ETL pipeline for geospatial data
+│   ├── spatial_etl_pipeline.py         # ETL pipeline for geospatial data
+│   └── folium_lims_katheri_webmap.py   # Folium cadastral web map (LIMS)
 ├── notebooks/
 │   └── hydrological_analysis.ipynb     # Watershed delineation with WhiteboxTools
 ├── requirements.txt
@@ -73,6 +74,19 @@ DEM visualization and RGB image overlay with advanced resampling techniques.
 
 ### 7. `spatial_etl_pipeline.py`
 End-to-end ETL pipeline for ingesting, transforming, and loading spatial data from multiple sources into PostGIS/ArcGIS Enterprise.
+
+### 8. `folium_lims_katheri_webmap.py`
+Interactive cadastral web map for the Katheri Land Information Management System (LIMS) using Python Folium.
+
+**Key features:**
+- 4 basemap layers (OpenStreetMap, Satellite, Terrain, CartoDB Dark)
+- Boundary polygon overlay (1612 Katheri administrative boundary)
+- Cadastral parcel visualization with land-use classification styling
+- Interactive popups with parcel ID, area, owner info, and land-use type
+- Color-coded parcels: Residential, Commercial, Agricultural, Industrial, Institutional, Mixed Use
+- MiniMap, mouse position, measurement tools, and fullscreen control
+- Parcel statistics computation (count, total area, land-use distribution)
+- Exports to standalone HTML for web deployment
 
 ## Technologies
 - **ArcPy** (ArcGIS Pro 3.2)
